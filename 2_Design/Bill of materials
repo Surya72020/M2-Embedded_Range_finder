@@ -1,0 +1,7 @@
+Circuit: Range_finder.simu
+
+Bill of Materials:
+
+Hd44780-2 : Hd44780   
+SR04-7 : SR04   
+atmega328-1 : atmega328   
