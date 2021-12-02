@@ -21,8 +21,8 @@ int main(void)
 	long count;
 	double distance;
 	
-	DDRA = 0x01;		/* Make trigger pin as output */
-	PORTD = 0xFF;		/* Turn on Pull-up */
+	DDRC = 0x01;		/* Make trigger pin as output */
+	PORTB = 0xFF;		/* Turn on Pull-up */
 	
 	LCD_Init();
 	LCD_String_xy(1, 0, "Ultrasonic");
@@ -34,9 +34,9 @@ int main(void)
 	while(1)
 	{
 		/* Give 10us trigger pulse on trig. pin to HC-SR04 */
-		PORTA |= (1 << Trigger_pin);
+		PORTB |= (1 << Trigger_pin);
 		_delay_us(10);
-		PORTA &= (~(1 << Trigger_pin));
+		PORTB &= (~(1 << Trigger_pin));
 		
 		TCNT1 = 0;	/* Clear Timer counter */
 		TCCR1B = 0x41;	/* Capture on rising edge, No prescaler*/
