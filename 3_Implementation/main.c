@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include "LCD_16x2_H_file.h"	/* Include LCD header file */
 
-#define  Trigger_pin	PA0	/* Trigger pin */
+#define  Trigger_pin	PC0	/* Trigger pin */
 
 int TimerOverflow = 0;
 
